@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laureles & Brasas — Cocina con sabor a La Candelaria</title>
+  <meta name="description" content="Restaurante Primos 1999 en La Candelaria, Bogotá. Comida deliciosa, ambiente único y reservas fáciles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Floating Back-to-Top -->
+  <button id="backToTop" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <img src="assets/img/Logo.png" alt="Logo Primos 1999" />
+        <span>Laureles & <strong> Brasas</strong></span>
+      </a>
+      <nav id="mainNav" class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#testimonios">Opiniones</a>
+        <a href="#blog">Novedades</a>
+        <a href="#galeria">Galería</a>
+        <a href="#reservas" class="btn btn-outline">Reservar</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir navegación" aria-controls="mainNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">La Candelaria · Bogotá</p>
+        <h1>La clave del buen sabor desde Laureles & Brasas</h1>
+        <p>Recetas con tradición familiar, ingredientes frescos y ese toque que te hace volver. Ven, prueba y enamórate.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#menu">Explorar Menú</a>
+          <a class="btn btn-outline" href="#reservas">Reservar mesa</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <!-- Reemplaza la imagen por tu foto principal del restaurante o un plato estrella -->
+        <img src="assets/img/Estrella.webp" alt="Plato estrella de Primos 1999">
+      </div>
+    </div>
+    <div class="hero-wave" aria-hidden="true"></div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="section about">
+    <div class="container grid-2">
+      <div class="about-media">
+        <img src="assets/img/Sala.jpg" alt="Ambiente de Primos 1999" class="rounded">
+      </div>
+      <div class="about-copy">
+        <h2 class="section-title">Nuestra historia</h2>
+        <p>En <strong>Laureles & Brasas</strong> cocinamos con el corazón. Somos de La Candelaria y amamos su ritmo, su arte y su gente. Traemos a la mesa los sabores más queridos de casa, servidos con detalle y una sonrisa.</p>
+        <ul class="bullets">
+          <li>Ingredientes frescos de productores locales.</li>
+          <li>Recetas caseras con un twist moderno.</li>
+          <li>Experiencia cálida para compartir entre amigos y familia.</li>
+        </ul>
+        <a class="btn" href="#reservas">Reserva ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menú con filtros -->
+  <section id="menu" class="section menu">
+    <div class="container">
+      <h2 class="section-title">Nuestro Menú</h2>
+      <p class="section-subtitle">Elige una categoría para antojarte</p>
+      <div class="filters" role="tablist" aria-label="Filtros de menú">
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true">Todo</button>
+        <button class="chip" data-filter="shawarma" role="tab">Shawarma</button>
+        <button class="chip" data-filter="kebab" role="tab">Kebab</button>
+        <button class="chip" data-filter="hamburguesa" role="tab">Hamburguesas</button>
+        <button class="chip" data-filter="pizza" role="tab">Pizzas</button>
+        <button class="chip" data-filter="postre" role="tab">Postres</button>
+      </div>
+
+      <div id="menuGrid" class="cards-grid">
+        <!-- Las tarjetas se insertan desde script.js usando menuItems -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Destacados / Carrusel simple -->
+  <section id="destacados" class="section featured">
+    <div class="container">
+      <h2 class="section-title">Platos destacados</h2>
+      <div class="carousel">
+        <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+        <div class="carousel-track" id="featuredTrack">
+          <!-- Slides inyectados por JS -->
+        </div>
+        <button class="carousel-btn next" aria-label="Siguiente">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="section testimonials">
+    <div class="container">
+      <h2 class="section-title">Clientes felices</h2>
+      <div class="testimonial-slider" id="testimonialSlider">
+        <!-- Testimonios inyectados por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog / Novedades -->
+  <section id="blog" class="section blog">
+    <div class="container">
+      <h2 class="section-title">Novedades</h2>
+      <div class="cards-list" id="blogList">
+        <!-- Entradas inyectadas por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section id="galeria" class="section gallery">
+    <div class="container">
+      <h2 class="section-title">Galería</h2>
+      <div class="masonry" id="galleryGrid">
+        <!-- Imágenes inyectadas por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Video (cover con botón de reproducción) -->
+  <section class="section video-cover">
+    <div class="container video-box">
+      <img src="assets/video/Restarual.mp4" alt="Interior del restaurante" class="rounded">
+      <button id="playVideo" class="play-btn" aria-label="Reproducir video">▶</button>
+      <!-- Ejemplo de modal de video -->
+      <dialog id="videoModal">
+        <div class="video-wrapper">
+          <iframe id="videoFrame" src="" title="Laureles & Brasas" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <button class="btn btn-outline close-modal" id="closeVideo">Cerrar</button>
+      </dialog>
+    </div>
+  </section>
+
+  <!-- Reservas / Contacto rápido -->
+  <section id="reservas" class="section booking">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section-title">Reserva tu mesa</h2>
+        <p>Completa el formulario y nos pondremos en contacto para confirmar tu reserva.</p>
+        <form id="bookingForm" class="form-card">
+          <div class="form-row">
+            <label>Nombre y Apellido
+              <input type="text" name="nombre" required placeholder="Tu nombre">
+            </label>
+            <label>Teléfono
+              <input type="tel" name="telefono" required placeholder="Ej: 311-000-000">
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Correo
+              <input type="email" name="correo" required placeholder="tucorreo@email.com">
+            </label>
+            <label>Personas
+              <input type="number" name="personas" required min="1" value="2">
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Fecha
+              <input type="date" name="fecha" required>
+            </label>
+            <label>Hora
+              <input type="time" name="hora" required>
+            </label>
+          </div>
+          <label>Mensaje
+            <textarea name="mensaje" rows="3" placeholder="Alguna preferencia o comentario"></textarea>
+          </label>
+          <button type="submit" class="btn">Enviar reserva</button>
+          <p id="bookingStatus" class="status"></p>
+        </form>
+      </div>
+      <div class="booking-info">
+        <h3>También puedes escribirnos</h3>
+        <ul class="contact-list">
+          <li><strong>Teléfono:</strong> <a href="tel:+573112495143">+573112495143</a></li>
+          <li><strong>Correo:</strong> <a href="mailto:reservas@Laureles & Brasas.com">reservas@Laureles & Brasas.com</a></li>
+          <li><strong>Dirección:</strong> Cra. 7 #12, La Candelaria, Bogotá</li>
+          <li><strong>Horario:</strong> Lun–Dom, 12:00–22:00</li>
+        </ul>
+        <div class="newsletter">
+          <h4>Suscríbete a novedades</h4>
+          <form id="newsletterForm" class="inline-form">
+            <input type="email" name="email" placeholder="Tu correo" required />
+            <button class="btn btn-outline">Suscribirme</button>
+          </form>
+          <p id="newsletterStatus" class="status"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#inicio" class="brand brand-footer">
+          <img src="./assets/img/logo.png" alt="Logo Primos 1999" />
+          <span>Laureles &  <strong> Brasas</strong></span>
+        </a>
+        <p>Sabores que cuentan historias desde La Candelaria. ¡Te esperamos!</p>
+      </div>
+      <div>
+        <h5>Enlaces</h5>
+        <ul>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#blog">Novedades</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="tel:+573112495143">+573112495143</a></li>
+          <li><a href="mailto:info@Laureles & Brasas.com">info@Laureles & Brasas.com</a></li>
+          <li>Cra. 7 #12, La Candelaria</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Síguenos</h5>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Laureles & Brasas. Hecho con sabor en Bogotá.
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
